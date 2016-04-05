@@ -6,33 +6,40 @@
 
 import Foundation
 
+//////////
+// HELP //
+//////////
+
+func help() {
+    
+    print("")
+    print("=============================================")
+    print("")
+    print("USEFUL COMMANDS:")
+    print("quit - Quits the calculator.")
+    print("help - Prints this menu again.")
+    print("")
+    print("VALID OPERATORS:")
+    print("+ - * / %")
+    print("")
+    print("OPERATIONS:")
+    print("count - Counts the number of inputs received.")
+    print("average - Averages all inputs received.")
+    print("fact - Calculates the factorial of one input.")
+    print("")
+    print("=============================================")
+    print("")
+    print("Proceed to calculate:")
+    print("")
+    
+}
+
 //////////////////
 // INTRODUCTION //
 //////////////////
 
 print("Welcome to SimpleCalc!")
-print("")
-print("=============================================")
-print("")
-print("USEFUL COMMANDS:")
-print("quit - Quits the calculator.")
-print("help - Prints this menu again.")
-print("")
-print("VALID OPERATORS:")
-print("+ - * / %")
-print("")
-print("OPERATIONS:")
-print("count - Counts the number of inputs received.")
-print("average - Averages all inputs received.")
-print("fact - Calculates the factorial of one input.")
-print("")
-print("=============================================")
-print("")
-print("Proceed to calculate:")
-
-//////////
-// HELP //
-//////////
+help()
 
 ////////////////
 // CALCULATOR //
@@ -85,7 +92,7 @@ while (calculatorOn) {
             print(result)
             complete = true
         } else if (response == "help") {
-            
+            help()
         } else if (response == "quit") {
             calculatorOn = false
             print("")
