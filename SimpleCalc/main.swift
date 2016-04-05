@@ -66,7 +66,20 @@ while !complete {
     } else if (operand != nil) {
         storage.append(operand!)
         if (opDeclared) {
-            
+            var result: UInt = 0
+            if (op == "+") {
+                result = storage.first! + storage.last!
+            } else if (op == "-") {
+                result = storage.first! - storage.last!
+            } else if (op == "*") {
+                result = storage.first! * storage.last!
+            } else if (op == "/") {
+                result = storage.first! / storage.last!
+            } else {
+                result = storage.first! % storage.last!
+            }
+            print(result)
+            complete = true
         }
     } else {
         print("That's not an integer or an operator.")
