@@ -57,8 +57,8 @@ while !complete {
         print(result)
         complete = true
     } else if (response == "fact") {
-        var result: UInt = 0
-        for (var i: UInt = 0; i <= storage.last; i++) {
+        var result = 0
+        for (var i = 0; i <= storage.count; i++) {
             result += i
         }
         print(result)
