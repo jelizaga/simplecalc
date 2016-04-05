@@ -86,12 +86,13 @@ while (calculatorOn) {
             complete = true
             print("")
         } else if (response == "fact") {
-            var result = 0
-            for (var i = 0; i <= storage.count; i++) {
+            var result:UInt = 0
+            for (var i:UInt = 0; i <= storage.last; i++) {
                 result += i
             }
             print(result)
             complete = true
+            print("")
         } else if (response == "help") {
             help()
         } else if (response == "quit") {
