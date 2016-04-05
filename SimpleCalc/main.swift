@@ -29,8 +29,6 @@ func help() {
     print("")
     print("=============================================")
     print("")
-    print("Proceed to calculate:")
-    print("")
     
 }
 
@@ -59,7 +57,8 @@ while (calculatorOn) {
     var complete = false
     // Declaring a boolean for a declared operand.
     var opDeclared = false
-    // Declaring a boolean for a declared operation.
+    
+    print("Calculate:")
     
     // Calculator loop.
     while !complete {
