@@ -51,7 +51,6 @@ var calculatorOn = true
 // The calculator loop. Resets calculation data upon completion of a calculation.
 while (calculatorOn) {
     
-    print("")
     // Declaring empty calculation array.
     var storage = [UInt]()
     // Declaring stored operator.
@@ -75,6 +74,8 @@ while (calculatorOn) {
         } else if (response == "count") {
             print(storage.count)
             complete = true
+            print("")
+            
         } else if (response == "average") {
             var total = 0.0
             for num in storage {
@@ -84,6 +85,7 @@ while (calculatorOn) {
             let result = total / count
             print(result)
             complete = true
+            print("")
         } else if (response == "fact") {
             var result = 0
             for (var i = 0; i <= storage.count; i++) {
@@ -114,6 +116,7 @@ while (calculatorOn) {
                 }
                 print(result)
                 complete = true
+                print("")
             }
         } else {
             print("That's not an integer or an operator.")
