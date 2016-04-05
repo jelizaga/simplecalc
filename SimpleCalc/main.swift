@@ -11,30 +11,28 @@ import Foundation
 //////////////////
 
 print("Welcome to SimpleCalc!")
+print("")
+print("=============================================")
+print("")
+print("USEFUL COMMANDS:")
+print("quit - Quits the calculator.")
+print("help - Prints this menu again.")
+print("")
+print("VALID OPERATORS:")
+print("+ - * / %")
+print("")
+print("OPERATIONS:")
+print("count - Counts the number of inputs received.")
+print("average - Averages all inputs received.")
+print("fact - Calculates the factorial of one input.")
+print("")
+print("=============================================")
+print("")
+print("Proceed to calculate:")
 
 //////////
 // HELP //
 //////////
-
-func helpMenu() {
-    
-    print("")
-    print("USEFUL COMMANDS:")
-    print("quit - Quits the calculator.")
-    print("help - Prints this menu again.")
-    print("")
-    print("VALID OPERATORS:")
-    print("+ - * / %")
-    print("")
-    print("OPERATIONS:")
-    print("count - Counts the number of inputs received.")
-    print("average - Averages all inputs received.")
-    print("fact - Calculates the factorial of one input.")
-    print("")
-    print("Proceed to calculate:")
-    print("")
-    
-}
 
 ////////////////
 // CALCULATOR //
@@ -43,9 +41,10 @@ func helpMenu() {
 // Declares that the calculator is on.
 var calculatorOn = true
 
-// The calculator loop.
+// The calculator loop. Resets calculation data upon completion of a calculation.
 while (calculatorOn) {
     
+    print("")
     // Declaring empty calculation array.
     var storage = [UInt]()
     // Declaring stored operator.
@@ -88,7 +87,9 @@ while (calculatorOn) {
         } else if (response == "help") {
             
         } else if (response == "quit") {
-            calculatorOn = false;
+            calculatorOn = false
+            print("")
+            break
         } else if (operand != nil) {
             storage.append(operand!)
             if (opDeclared) {
